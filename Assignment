@@ -1,0 +1,110 @@
+Question 1:  Write a simple program in HTML  that displays the heading "HTML defines the content and structure of your website” on the web browser.
+
+Ans.:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heading tag</title>
+</head>
+<body>
+    <h1>HTML defines the content and structure of your website</h1>
+</body>
+</html>
+
+
+
+
+Question 2:  Explain the purpose of comments in HTML and provide an example of how to use comments in an HTML document.
+
+Ans.:    Comments in HTML are used to add notes or explanations within the code that are not displayed on the webpage. 
+         They help developers understand the code, provide reminders, and make the code easier to read and maintain.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heading tag</title>
+</head>
+<body>
+
+    <!-- This is a heading -->
+    <h1>Welcome to My Website</h1>
+
+    <!-- This paragraph explains the purpose of the site -->
+    <h1>HTML defines the content and structure of your website</h1>
+
+    <!-- TODO: Add more sections here later -->
+
+</body>
+</html>
+
+
+
+
+
+Question 3:   Write an HTML program that includes a heading, a paragraph of text, a horizontal line, and a line break. Arrange these elements to create a simple web page layout.
+
+Ans.:
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heading tag</title>
+</head>
+<body>
+
+    <!-- This is a heading -->
+    <h1>Welcome to My Website</h1>
+
+    <hr>  <!-- Horizontal Line -->
+
+    <!-- This paragraph explains the purpose of the site -->
+    <h1>HTML defines the content and structure of your website</h1>
+
+    <!-- Paragraph -->
+    <p>This is a simple paragraph of text that gives information about the page.</p>  
+
+    <hr>  <!-- Horizontal Line 2 -->
+
+    <!-- Line Break -->
+    <p> This is another paragraph. <br> Here is a new line using the line break tag. </p> 
+
+</body>
+</html>
+
+
+
+
+Question 4:    Write a short note on Tag and element with an example.
+
+Ans.:      A tag is a keyword inside angle brackets (< >) that defines an HTML element, such as <p> for a paragraph. 
+           An element consists of an opening tag, content, and a closing tag. For example, in 
+            
+           <p>This is a paragraph.</p> 
+
+           <p> is the opening tag, </p> is the closing tag, and this is a paragraph. is the content. 
+           Together, they form a paragraph element.
+
+
+
+
+
+Question 5:   What is the DOCTYPE Declaration in HTML?
+
+Ans.:         The DOCTYPE declaration in HTML (<!DOCTYPE html>) tells the web browser which version of HTML the document is using. It must be the first line in an HTML file.
+
+
+
+
+
+
+
+
+
