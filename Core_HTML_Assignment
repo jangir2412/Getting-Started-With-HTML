@@ -1,0 +1,502 @@
+1. Build a simple webpage that displays text as shown in the below image.
+  This text will be bolded.
+  This text will be italic.
+  This text will be underlined
+  This text will be highlighted
+  This is normal text This will be super scripted This is normal again
+  This is normal text. This text will be subscripted
+  Normal Text Small Text
+  This text will be deleted
+
+Ans.:  
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Text Formatting Example</title>
+</head>
+<body>
+
+  <p><b>This text will be bolded.</b></p>
+  <p><i>This text will be italic.</i></p>
+  <p><u>This text will be underlined</u></p>
+  <p><mark>This text will be highlighted</mark></p>
+  <p>This is normal text <sup>This will be super scripted</sup> This is normal again</p>
+  <p>This is normal text <sub>This text will be subscripted</sub></p>
+  <p>Normal Text <small>Small Text</small></p>
+  <p><del>This text will be deleted</del></p>
+
+</body>
+</html>
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+2. Build a simple webpage that helps users navigate different web development-related websites. Note: On clicking the hyperlink the web pages should open in a new tab. Below is a reference image.
+    Navigate Me:
+                Take me to PW Skills to buy a course.
+            Take me to MDN docs to know more about Web Development.
+                Take me to PW Skills Lab to practice live coding.
+
+
+Ans.:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Web Dev Navigation</title>
+</head>
+<body>
+
+  <h2>Navigate Me:</h2>
+
+  <p>Take me to <a href="https://pwskills.com/" target="_blank"> PW Skills </a> Take me to</p>
+  <p>Take me to <a href="https://developer.mozilla.org/en-US/docs/Web" target="_blank">MDN </a> docs to know more about Web Development.</p>
+  <p>Take me to <a href="https://lab.pwskills.com/" target="_blank"> PW Skills Lab</a> to practice live coding.</p>
+
+</body>
+</html>
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+3. Build a simple blog web page with 3 pages home, web development, and web design. 
+  Each page must contain hyperlinks to other pages in the top, a heading of the page topic and a paragraph of information.
+  For the home page you can add some information about yourself.
+
+
+
+Ans.:  
+
+
+<!-- home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home - My Blog</title>
+</head>
+<body>
+  <nav>
+    <a href="home.html">Home</a> |
+    <a href="webdev.html">Web Development</a> |
+    <a href="webdesign.html">Web Design</a>
+  </nav>
+
+  <h1>Welcome to My Blog</h1>
+  <p>Hello! I'm Akshay Kumar, a passionate web developer, designer, and 3D artist. This blog is my space to share insights, tutorials, and thoughts on all things related to web development and design. Feel free to explore the sections and join me on this journey!</p>
+</body>
+</html>
+
+<!-- webdev.html --> ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Web Development - My Blog</title>
+</head>
+<body>
+  <nav>
+    <a href="home.html">Home</a> |
+    <a href="webdev.html">Web Development</a> |
+    <a href="webdesign.html">Web Design</a>
+  </nav>
+
+  <h1>Web Development</h1>
+  <p>Web development is the process of building and maintaining websites. It involves working with HTML, CSS, JavaScript, and frameworks like React, Angular, or backend tools like Node.js and databases. Web developers make the web functional and interactive.</p>
+</body>
+</html>
+
+<!-- webdesign.html -->=====================================================================================================================================================================================================================================================================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Web Design - My Blog</title>
+</head>
+<body>
+  <nav>
+    <a href="home.html">Home</a> |
+    <a href="webdev.html">Web Development</a> |
+    <a href="webdesign.html">Web Design</a>
+  </nav>
+
+  <h1>Web Design</h1>
+  <p>Web design focuses on creating visually appealing and user-friendly interfaces for websites. It involves graphic design, color theory, typography, and UX/UI principles. A good web design ensures the website is attractive, responsive, and easy to navigate.</p>
+</body>
+</html>
+
+
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+4. Create an ordered list of HTML tags. Each list item must include the tag name and some information about the tag.
+
+
+Ans.:
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Tags List</title>
+</head>
+<body>
+
+  <h2>Common HTML Tags</h2>
+  <ol>
+    <li><strong>&lt;html&gt;</strong> – The root element that wraps all HTML content on the page.</li>
+    <li><strong>&lt;head&gt;</strong> – Contains metadata like the page title, links to stylesheets, and other head elements.</li>
+    <li><strong>&lt;title&gt;</strong> – Sets the title of the webpage, shown in the browser tab.</li>
+    <li><strong>&lt;body&gt;</strong> – Contains all the visible content of the webpage such as text, images, and links.</li>
+    <li><strong>&lt;h1&gt; to &lt;h6&gt;</strong> – Heading tags used to define headings; <code>&lt;h1&gt;</code> is the largest and <code>&lt;h6&gt;</code> is the smallest.</li>
+    <li><strong>&lt;p&gt;</strong> – Defines a paragraph of text.</li>
+    <li><strong>&lt;a&gt;</strong> – Defines a hyperlink that links to another page or website.</li>
+    <li><strong>&lt;img&gt;</strong> – Embeds an image in the webpage.</li>
+    <li><strong>&lt;ul&gt;</strong> – Creates an unordered (bulleted) list.</li>
+    <li><strong>&lt;ol&gt;</strong> – Creates an ordered (numbered) list.</li>
+    <li><strong>&lt;li&gt;</strong> – Defines a list item inside <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code>.</li>
+    <li><strong>&lt;div&gt;</strong> – A container used to group and style content with CSS.</li>
+    <li><strong>&lt;span&gt;</strong> – An inline container used to apply styles or scripts to text.</li>
+  </ol>
+
+</body>
+</html>
+
+ 
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+5. Create a description list of full stack web development tech stack, using the <dl> tag. 
+    Each term should be a tech stack name and each description should be a brief explanation of what the tech stack is used for
+
+
+Ans.:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Full Stack Web Development Tech Stack</title>
+</head>
+<body>
+
+  <h2>Full Stack Web Development Tech Stack</h2>
+
+  <dl>
+    <dt>HTML</dt>
+    <dd>Used to create the basic structure and content of web pages.</dd>
+
+    <dt>CSS</dt>
+    <dd>Used for styling HTML elements, controlling layout, colors, fonts, and responsiveness.</dd>
+
+    <dt>JavaScript</dt>
+    <dd>Adds interactivity to web pages, such as dynamic content updates and event handling.</dd>
+
+    <dt>React</dt>
+    <dd>A popular JavaScript library for building user interfaces, especially single-page applications (SPAs).</dd>
+
+    <dt>Node.js</dt>
+    <dd>Allows JavaScript to run on the server-side, enabling backend development with JS.</dd>
+
+    <dt>Express.js</dt>
+    <dd>A lightweight Node.js framework used for building web applications and APIs.</dd>
+
+    <dt>MongoDB</dt>
+    <dd>A NoSQL database used to store application data in a flexible, JSON-like format.</dd>
+
+    <dt>Git</dt>
+    <dd>A version control system used to track code changes and collaborate with others.</dd>
+
+    <dt>GitHub</dt>
+    <dd>A platform for hosting and managing Git repositories, useful for collaboration and deployment.</dd>
+
+    <dt>REST API</dt>
+    <dd>Defines a set of rules for creating web services that allow front-end and back-end to communicate.</dd>
+  </dl>
+
+</body>
+</html>
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+6. Create an ordered list of the full stack web development tech stack HTML, CSS, and JS. For each tech stack, create a table that lists the tech stack name, 
+   its primary use cases, and some key features or benefits. Below is a reference image.
+
+Ans.: 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tech Stack Tables</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    ol {
+      border: 1px solid #000;
+      padding: 15px;
+      width: 600px;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    th, td {
+      border: 1px solid #000;
+      padding: 8px;
+      vertical-align: top;
+    }
+
+    th {
+      background-color: #f2f2f2;
+      text-align: left;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <ol>
+    <li>
+      <strong>HTML</strong>
+      <table>
+        <tr>
+          <th>Primary Use Cases</th>
+          <th>Key Features/Benefits</th>
+        </tr>
+        <tr>
+          <td>Building the structure of web pages</td>
+          <td>
+            <ul>
+              <li>Simple and easy to learn</li>
+              <li>Compatible with all web browsers</li>
+              <li>Allows for <strong>semantic markup</strong></li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </li>
+
+    <li>
+      <strong>CSS</strong>
+      <table>
+        <tr>
+          <th>Primary Use Cases</th>
+          <th>Key Features/Benefits</th>
+        </tr>
+        <tr>
+          <td>Styling and layout of web pages</td>
+          <td>
+            <ul>
+              <li>Allows for separation of content and presentation</li>
+              <li>Enables responsive design</li>
+              <li>Offers a wide range of styling options</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </li>
+
+    <li>
+      <strong>JavaScript</strong>
+      <table>
+        <tr>
+          <th>Primary Use Cases</th>
+          <th>Key Features/Benefits</th>
+        </tr>
+        <tr>
+          <td>Making web pages interactive and dynamic</td>
+          <td>
+            <ul>
+              <li>Client-side scripting for interactivity</li>
+              <li>Supports asynchronous operations (AJAX, fetch)</li>
+              <li>Used for both frontend and backend (Node.js)</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </li>
+  </ol>
+
+</body>
+</html>
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+7. Build a complex nested list structure representing a multi-level table of contents. Use unordered lists (<ul>) and list items (<li>) with inline-block styling to create a structured layout. Apply formatting tags to enhance the presentation of list items.
+
+Ans.:
+
+<html lang="en">
+    <!--Code by Akshay Kumar Git: @jangir2412-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested list</title>
+</head>
+<body>
+
+    <div style="  padding: 10px;">
+        <h1>Nested List Assignment</h1>
+    
+    <ul>
+
+        <li>
+            <a href="#">HTML</a>
+            <ul>
+                <a href="#">Attributes</a>
+                <a href="#">Tags</a>
+            </ul>
+        </li>
+        <li>
+            <a href="#">CSS</a>
+            <ul>
+                <a href="#">Properties</a>
+                <li><a href="#">Links</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#"><b> &lt;Video&gt;</b> : Define a video file.</a>
+            <ul>
+                <li>
+                    <a href="#">Attributes</a>
+                    <ul>
+                        <li>
+                            <a href="#"><b>src :</b> Specifies the video source.</a>
+                        </li>
+                        <li>
+                            <a href="#"><b>controls :</b> Adds playback controls</a>
+                        </li>
+                        <li>
+                            <a href="#"><b>width</b>, <b>height :</b> Specifies the size of the video.</a>
+                        </li>
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Properties</a>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#"><b> &lt;script&gt;</b> : Defines embedded JavaScript code.</a>
+            <ul>
+                <li>
+                    <a href="#">Attributes</a>
+                    <ul>
+                        <li>
+                            <a href="#"><b>src :</b> Specifies the external JavaScript file to include.</a>
+                            <ul>
+                                <li><a href="#"># For none</a></li>
+                            </ul>
+                        </li>                        
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#"><b> &lt;noscript&gt;</b> : Defines content for browsers that do not support or have disabled JavaScript.</a>
+        </li>
+
+    </ul>
+    </div>
+
+</body>
+</html>
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+8.  Create a table to display a conference schedule. Each row corresponds to a time slot, and each columncorresponds to a room. Some time slots might have multiple sessions 
+running simultaneously in different rooms. Utilize rowspan and colspan attributes as necessary to accommodate this complex schedule.(use table attribute “cellpadding”  to give
+extra padding in each table cell ).
+
+Ans.: 
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time_Table</title>
+   
+
+</head>
+<body>
+    
+    <h1>Time Table</h1>
+
+    <table class="tab_le" cellpadding="15px" border="1">
+
+        <thead>
+            <tr>
+                <th>Time</th>
+                <th>Class 1</th>
+                <th>Class 2</th>
+                <th>Class 3</th>
+                <th>Class 4</th>
+            </tr>
+        </thead>
+    
+        <tbody>
+            <!--9:00 AM - 10:00 AM-->
+            <tr>
+                <td rowspan="3">9:00 AM - 10:00 AM</td>
+                <td rowspan="2">Keynote</td>
+                <td>Session A</td>
+                <td>Session B</td>
+                <td rowspan="3">Session C</td>
+            </tr>
+            <tr>
+                <td>Session D</td>
+                <td>Session E</td>
+            </tr>
+            <tr>
+                <td>10:30 AM - 11:30 AM</td>
+                <td colspan="2">Session F</td>
+                
+            </tr>
+            <tr>
+                <td>12:00 PM - 01:00 PM</td>
+                <td colspan="4">Lunch Break</td>
+            </tr>
+            <tr >
+                <td rowspan="2">01:00 PM - 2:00 PM</td>
+                <td>Session G</td>
+                <td rowspan="2">Session H</td>
+                <td>Session I</td>
+                <td>Session J</td>
+            </tr>
+            <tr>
+                <td>Session K</td>
+                <td>Session L</td>
+                <td>Session M</td>
+            </tr>
+        </tbody>
+    </table> 
+</body>
+</html>
+
+
+
