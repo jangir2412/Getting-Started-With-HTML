@@ -1,0 +1,204 @@
+Modern HTML Assignment
+
+
+
+
+Q. 1   List out the features of HTML5
+
+
+Ans.
+
+
+New Semantic Elements, 
+Canvas Element
+SVG Support
+Audio and Video Support
+Form Enhancements
+Geolocation API
+Local Storage & Session Storage
+Offline Capabilities
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q. 2  What are HTML Entities? List out 5 commonly used HTML entities 
+
+
+Ans.
+
+
+HTML Entities are special codes used to display reserved characters in HTML that would otherwise be interpreted as HTML code. They start with & and end with ;.
+&lt; – Less than (<)
+&gt; – Greater than (>)
+&amp; – Ampersand (&)
+&quot; – Double quote (")
+&nbsp; – Non-breaking space
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q. 3  Define accessibility in the context of web development. Discuss why it's essential to create accessiblewebsites and how it benefits different user group.
+
+Ans.
+
+
+Accessibility means making websites usable for everyone, including people with disabilities.
+
+Why It's Essential:
+Inclusivity – Supports users with disabilities
+Legal Compliance – Meets accessibility laws
+Better UX – Improves overall usability
+SEO Benefits – Helps with search engine ranking
+Wider Reach – More users can access the content
+
+Benefits for User Groups:
+Visually impaired – Screen readers, alt text
+Hearing impaired – Captions, transcripts
+Mobility issues – Keyboard navigation
+Cognitive issues – Simple layout, clear text
+Mobile users – Responsive, fast-loading sites
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q. 4  List any 3 ways which help us in improving the accessibility of HTML.
+
+
+Ans.
+
+Here are 3 ways to improve accessibility in HTML:
+
+Use Semantic HTML Tags
+Provide Alt Text for Images
+Ensure Keyboard Navigation
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q. 5   Create a web page that highlights the features of HTML5. Use appropriate semantic tags to structure the content 
+       and showcase at least three key features of HTML5 with explanations.
+
+
+
+Ans.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5 Features</title>
+</head>
+<body>
+
+    <header>
+        <h1>Key Features of HTML5</h1>
+        <p>Explore some of the powerful features introduced in HTML5.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#feature1">Semantic Elements</a></li>
+            <li><a href="#feature2">Audio & Video</a></li>
+            <li><a href="#feature3">Local Storage</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="feature1">
+            <h2>1. Semantic Elements</h2>
+            <p>HTML5 introduces new semantic tags like &lt;header&gt;, &lt;footer&gt;, &lt;article&gt;, and &lt;section&gt; which make the structure of web pages more meaningful and accessible.</p>
+        </section>
+
+        <section id="feature2">
+            <h2>2. Audio & Video</h2>
+            <p>HTML5 allows embedding audio and video files directly using &lt;audio&gt; and &lt;video&gt; tags without relying on third-party plugins like Flash.</p>
+        </section>
+
+        <section id="feature3">
+            <h2>3. Local Storage</h2>
+            <p>With HTML5, web applications can store data locally in the user's browser using localStorage and sessionStorage, improving performance and user experience.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 WebTech Insights</p>
+    </footer>
+
+</body>
+</html>
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q. 6   Create a simple web page which has a table. The table must have 2 columns HTML and HTML5. The table should include 
+       a minimum of three rows describing the differences between HTML and HTML5.
+
+
+
+Ans.
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML vs HTML5</title>
+</head>
+<body>
+
+    <header>
+        <h1>HTML vs HTML5</h1>
+        <p>Comparing the key differences between HTML and HTML5.</p>
+    </header>
+
+    <main>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>HTML</th>
+                    <th>HTML5</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Requires third-party plugins for multimedia support (e.g., Flash for videos).</td>
+                    <td>Supports native multimedia elements like &lt;audio&gt; and &lt;video&gt; without plugins.</td>
+                </tr>
+                <tr>
+                    <td>Uses presentational tags like &lt;font&gt; and &lt;center&gt; for styling.</td>
+                    <td>Focuses on semantic elements such as &lt;header&gt;, &lt;footer&gt;, &lt;article&gt;, and &lt;section&gt;.</td>
+                </tr>
+                <tr>
+                    <td>Limited support for offline applications.</td>
+                    <td> It introduces offline capabilities through localStorage and the Application Cache (Service Workers for advanced use).</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Akshay Kumar</p>
+    </footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
