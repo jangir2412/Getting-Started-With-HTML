@@ -1,0 +1,331 @@
+#Starting with CSS Assignment
+
+
+Q. 1   Create a simple page with some div tags and show different ways to add CSS as well as what happens
+when you target the same elements with inline, internal, and external CSS. Also, utilize comments in the
+project where required.
+
+
+Ans.  
+
+#HTML FILE
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Priority Demo</title>
+
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* Internal CSS */
+    .box {
+      background-color: lightblue; /* This will be overridden by inline styles if used */
+      color: black;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>CSS Priority Demonstration</h2>
+
+  <!-- This div uses all three: inline, internal, and external CSS -->
+  <div class="box" style="background-color: orange;">
+    <!-- Inline style will take highest priority for background-color -->
+    This div uses inline, internal, and external CSS.
+  </div>
+
+  <!-- This div uses internal and external CSS only -->
+  <div class="box">
+    This div uses internal and external CSS only.
+  </div>
+
+  <!-- This div uses only external CSS -->
+  <div class="external-box">
+    This div uses only external CSS.
+  </div>
+
+  <!-- This div has no styles applied -->
+  <div>
+    This div has no CSS applied.
+  </div>
+
+</body>
+</html>
+
+
+
+#style File
+
+
+/* styles.css - External CSS */
+
+/* External style for .box */
+.box {
+  border: 2px solid green;
+  background-color: lightgreen; /* Will be overridden by internal or inline */
+  color: darkblue;
+  padding: 10px;
+  margin: 10px;
+}
+
+/* External style for .external-box */
+.external-box {
+  background-color: lightcoral;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+}
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Q. 2
+
+Build an HTML page with multiple paragraphs, each assigned a unique class name. Write CSS rules using
+class selectors to apply distinct styling to each paragraph. Follow the BEM naming convention and
+explain how you've named the classes.
+
+Ans.
+
+#...HTML File
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BEM Paragraph Styling</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h1>Styled Paragraphs with BEM Naming</h1>
+
+  <p class="paragraph paragraph--intro">
+    This is the introductory paragraph, styled with a soft background.
+  </p>
+
+  <p class="paragraph paragraph--warning">
+    This is a warning paragraph with attention-grabbing colors.
+  </p>
+
+  <p class="paragraph paragraph--success">
+    This paragraph indicates a successful action with a green tone.
+  </p>
+
+  <p class="paragraph paragraph--muted">
+    This paragraph is visually subdued for less important content.
+  </p>
+
+</body>
+</html>
+
+
+#...CSS File
+
+/* Base block style */
+.paragraph {
+  font-family: Arial, sans-serif;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+/* Modifier: Intro paragraph */
+.paragraph--intro {
+  background-color: #e0f7fa;
+  color: #006064;
+}
+
+/* Modifier: Warning paragraph */
+.paragraph--warning {
+  background-color: #fff3e0;
+  color: #e65100;
+  border: 1px solid #ff9800;
+}
+
+/* Modifier: Success paragraph */
+.paragraph--success {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #81c784;
+}
+
+/* Modifier: Muted paragraph */
+.paragraph--muted {
+  background-color: #f5f5f5;
+  color: #9e9e9e;
+  font-style: italic;
+}
+
+
+
+paragraph: Block – the main component being styled.
+
+paragraph--intro: Modifier – applies a unique style for an introductory message.
+
+paragraph--warning: Modifier – makes the text look like a warning.
+
+paragraph--success: Modifier – gives it a success/confirmation style.
+
+paragraph--muted: Modifier – applies a faded style for less important content.
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Q.3  
+
+Develop an HTML form with various input elements. Use CSS to style the form, including setting
+background colors for input fields. Create a custom color palette for the form elements, and demonstrate
+how to apply opacity to one of the form sections.
+
+
+Ans.
+
+
+#...HTML File
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Styled Contact Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="form-wrapper">
+    <h2 class="form-title">Contact Us</h2>
+
+    <!-- Transparent Section -->
+    <section class="form-section form-section--transparent">
+      <form class="contact-form">
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your name">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com">
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" placeholder="Type your message..."></textarea>
+
+        <label for="category">Category:</label>
+        <select id="category" name="category">
+          <option value="feedback">Feedback</option>
+          <option value="inquiry">Inquiry</option>
+          <option value="support">Support</option>
+        </select>
+
+        <div class="form-buttons">
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+        </div>
+
+      </form>
+    </section>
+  </div>
+
+</body>
+</html>
+
+
+
+#...CSS File
+
+/* Custom Color Palette */
+:root {
+  --primary: #3498db;
+  --secondary: #2ecc71;
+  --background: #f4f6f8;
+  --text: #333;
+  --light: #ecf0f1;
+  --danger: #e74c3c;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+  margin: 0;
+  padding: 40px;
+}
+
+/* Form container */
+.form-wrapper {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  background: var(--light);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+/* Section with opacity */
+.form-section--transparent {
+  background-color: rgba(52, 152, 219, 0.1); /* primary with opacity */
+  padding: 20px;
+  border-radius: 6px;
+}
+
+/* Form styling */
+.contact-form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: var(--light);
+}
+
+/* Buttons */
+.form-buttons {
+  margin-top: 20px;
+}
+
+button {
+  background-color: var(--primary);
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+button:hover {
+  background-color: var(--secondary);
+}
+
+
+
+
+
+Custom Palette: Defined using CSS variables in :root.
+
+Opacity: The .form-section--transparent class uses rgba() for a translucent background.
+
+Input Styling: Inputs have consistent padding, background, and borders.
+
+Hover Effects: Buttons change color on hover for interactivity.
+
+
