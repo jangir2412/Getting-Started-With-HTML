@@ -1,0 +1,332 @@
+
+--------------------------------------Positions in CSS Assignment---------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+Task 1.-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Box Layout</title>
+  <style>
+    body {
+      margin: 0;
+    }
+    .box {
+      width: 50px;
+      height: 50px;
+      background-color: turquoise;
+      position: absolute;
+      text-align: center;
+      line-height: 50px;
+      font-weight: bold;
+      font-size: 24px;
+    }
+    #a {
+      left: 200px;
+      top: 200px;
+    }
+    #b {
+      left: 170px; /* 200 - 5 */
+      top: 170px;   /* 200 - 5 */
+    }
+    #c {
+      left: 230px; /* 200 + 5 + 50 */
+      top: 170px;
+    }
+    #d {
+      left: 170px;
+      top: 230px; /* 200 + 5 + 50 */
+    }
+    #e {
+      left: 230px;
+      top: 230px;
+    }
+  </style>
+</head>
+<body>
+  <div id="a" class="box">A</div>
+  <div id="b" class="box">B</div>
+  <div id="c" class="box">C</div>
+  <div id="d" class="box">D</div>
+  <div id="e" class="box">E</div>
+</body>
+</html>
+
+
+
+Task 2.-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+position: relative: Moves the element relative to its normal spot. It still takes up space in the layout.
+
+position: absolute: Places the element exactly where specified, relative to the nearest positioned ancestor. It’s removed from the normal layout flow.
+
+
+
+
+
+
+
+
+Task 3. -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Earth Card</title>
+  <style>
+    .card {
+      width: 90%;
+      max-width: 800px;
+      border: 2px solid black;
+      padding: 15px;
+      background-color: #fdfbe9;
+      margin: 20px auto;
+      overflow: hidden; /* to clear float */
+    }
+
+    .card img {
+      float: right;
+      width: 200px;
+      height: auto;
+      margin-left: 15px;
+      border: 1px solid #000;
+    }
+
+    .card h2 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1733506260469-8a6a07d95051?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Colorful glass pattern">
+    <h2>The Earth!!!</h2>
+    <p>
+      Nature is Earth's masterpiece, a symphony of life composed through millennia.
+      Its landscapes whisper tales of ancient mountains, winding rivers, and flourishing forests,
+      reminding us of the planet's boundless beauty. From delicate petals to towering redwoods,
+      nature's artistry stirs awe and reconnects us to the essence of existence.
+      Nature is Earth's masterpiece, a symphony of life composed through millennia.
+      Its landscapes whisper tales of ancient mountains, winding rivers, and flourishing forests.
+    </p>
+  </div>
+</body>
+</html>
+
+
+
+Task 4. -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sticky Header</title>
+  <style>
+    body {
+      
+      margin: 0px 10px 0px 10px;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #222;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-weight: bold;
+    }
+
+    nav a {
+      color: gray;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 14px;
+      justify-items: end;
+    }
+
+    nav_item {
+      justify-items: end;
+    }
+
+    nav a.active,
+    nav a:hover {
+      color: white;
+    }
+
+    .cta {
+      padding: 5px 10px;
+      border-radius: 5px;
+      color: gold;
+      text-decoration: none;
+      font-weight: bold;
+      border: 1px solid gold;
+    }
+
+    .content {
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">LOGO</div>
+    <nav class="nav_item">
+      <a href="#">Home</a>
+      <a href="#">Pricing</a>
+      <a href="#">Contact</a>
+      <a href="#">Terms and Condition</a>
+    </nav>
+    <a href="#" class="cta">Get Started</a>
+  </header>
+
+  <div class="content">
+    <h2>Heading 1</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lacus mi, cursus auctor finibus nec, hendrerit in massa. Aliquam porta non sapien at porta. Quisque dignissim consectetur lacus in imperdiet. Vivamus in augue eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a egestas nisl, a condimentum quam. Aliquam nunc quam, volutpat vitae nibh in, viverra hendrerit nisi. Ut ultrices est vel dolor vestibulum, a elementum eros ullamcorper. Maecenas finibus pellentesque sem, sed mollis leo pretium id.
+
+Donec ut quam odio. Morbi vulputate et sem vel facilisis. Morbi mollis dolor at rutrum lobortis. Morbi luctus pellentesque nunc. Donec fringilla quam quis faucibus tincidunt. In hac habitasse platea dictumst. In hendrerit risus in massa fermentum placerat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas risus nibh, pulvinar at tempus sed, aliquam placerat elit. Nulla sed quam sapien. Sed et pretium massa. Aenean lorem nunc, laoreet non odio sit amet, tincidunt posuere massa. Aliquam eget commodo ipsum. Maecenas id ex nec ipsum ultrices bibendum. Aenean ac augue commodo, dignissim nulla elementum, vestibulum tortor. Phasellus vitae odio neque.
+
+Donec at ipsum bibendum, congue ipsum congue, vulputate velit. In congue augue eget diam tempus, sed lacinia ante pretium. Fusce dapibus pharetra massa, sit amet scelerisque purus venenatis id. Vivamus at ante non lorem faucibus consequat eget vitae ligula. Nunc varius rutrum nisl, nec tincidunt ante. Mauris convallis ipsum sed viverra pharetra. Vivamus suscipit gravida mattis. Pellentesque nibh erat, dictum vitae felis id, ultrices consectetur turpis.
+
+Suspendisse potenti. Mauris et felis leo. Donec magna eros, eleifend in convallis ut, malesuada sed diam. Cras id ante purus. Aenean tempus mauris nisl, non mattis enim sollicitudin auctor. Donec in enim aliquet, vestibulum neque at, semper nunc. Morbi facilisis, felis eget venenatis fringilla, nunc ante congue orci, non finibus orci neque non quam. Curabitur dapibus at enim sit amet eleifend. Mauris ullamcorper consequat massa, a semper turpis cursus quis. Etiam mollis id dolor vitae sagittis. Donec placerat ac purus quis gravida.
+
+Proin auctor, ex id mollis venenatis, mauris arcu pretium orci, quis pharetra augue est nec est. Praesent nec tellus ut sapien suscipit pharetra et vitae tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus, quam vel fermentum elementum, nulla ex interdum enim, vitae viverra justo enim eget lectus. Sed vel cursus ante. Nulla ultricies, lectus nec finibus tincidunt, metus nulla feugiat augue, ut rhoncus est leo vel nisl. Aenean sem nibh, pretium non fringilla vel, hendrerit eu augue. Suspendisse ut ante quis sapien pulvinar dapibus ac vitae massa. Nulla non mi augue.</p>
+    <h2>Heading 2</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lacus mi, cursus auctor finibus nec, hendrerit in massa. Aliquam porta non sapien at porta. Quisque dignissim consectetur lacus in imperdiet. Vivamus in augue eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a egestas nisl, a condimentum quam. Aliquam nunc quam, volutpat vitae nibh in, viverra hendrerit nisi. Ut ultrices est vel dolor vestibulum, a elementum eros ullamcorper. Maecenas finibus pellentesque sem, sed mollis leo pretium id.
+
+Donec ut quam odio. Morbi vulputate et sem vel facilisis. Morbi mollis dolor at rutrum lobortis. Morbi luctus pellentesque nunc. Donec fringilla quam quis faucibus tincidunt. In hac habitasse platea dictumst. In hendrerit risus in massa fermentum placerat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas risus nibh, pulvinar at tempus sed, aliquam placerat elit. Nulla sed quam sapien. Sed et pretium massa. Aenean lorem nunc, laoreet non odio sit amet, tincidunt posuere massa. Aliquam eget commodo ipsum. Maecenas id ex nec ipsum ultrices bibendum. Aenean ac augue commodo, dignissim nulla elementum, vestibulum tortor. Phasellus vitae odio neque.
+
+Donec at ipsum bibendum, congue ipsum congue, vulputate velit. In congue augue eget diam tempus, sed lacinia ante pretium. Fusce dapibus pharetra massa, sit amet scelerisque purus venenatis id. Vivamus at ante non lorem faucibus consequat eget vitae ligula. Nunc varius rutrum nisl, nec tincidunt ante. Mauris convallis ipsum sed viverra pharetra. Vivamus suscipit gravida mattis. Pellentesque nibh erat, dictum vitae felis id, ultrices consectetur turpis.
+
+Suspendisse potenti. Mauris et felis leo. Donec magna eros, eleifend in convallis ut, malesuada sed diam. Cras id ante purus. Aenean tempus mauris nisl, non mattis enim sollicitudin auctor. Donec in enim aliquet, vestibulum neque at, semper nunc. Morbi facilisis, felis eget venenatis fringilla, nunc ante congue orci, non finibus orci neque non quam. Curabitur dapibus at enim sit amet eleifend. Mauris ullamcorper consequat massa, a semper turpis cursus quis. Etiam mollis id dolor vitae sagittis. Donec placerat ac purus quis gravida.
+
+Proin auctor, ex id mollis venenatis, mauris arcu pretium orci, quis pharetra augue est nec est. Praesent nec tellus ut sapien suscipit pharetra et vitae tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus, quam vel fermentum elementum, nulla ex interdum enim, vitae viverra justo enim eget lectus. Sed vel cursus ante. Nulla ultricies, lectus nec finibus tincidunt, metus nulla feugiat augue, ut rhoncus est leo vel nisl. Aenean sem nibh, pretium non fringilla vel, hendrerit eu augue. Suspendisse ut ante quis sapien pulvinar dapibus ac vitae massa. Nulla non mi augue.</p>
+    <h2>Heading 3</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lacus mi, cursus auctor finibus nec, hendrerit in massa. Aliquam porta non sapien at porta. Quisque dignissim consectetur lacus in imperdiet. Vivamus in augue eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a egestas nisl, a condimentum quam. Aliquam nunc quam, volutpat vitae nibh in, viverra hendrerit nisi. Ut ultrices est vel dolor vestibulum, a elementum eros ullamcorper. Maecenas finibus pellentesque sem, sed mollis leo pretium id.
+
+Donec ut quam odio. Morbi vulputate et sem vel facilisis. Morbi mollis dolor at rutrum lobortis. Morbi luctus pellentesque nunc. Donec fringilla quam quis faucibus tincidunt. In hac habitasse platea dictumst. In hendrerit risus in massa fermentum placerat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas risus nibh, pulvinar at tempus sed, aliquam placerat elit. Nulla sed quam sapien. Sed et pretium massa. Aenean lorem nunc, laoreet non odio sit amet, tincidunt posuere massa. Aliquam eget commodo ipsum. Maecenas id ex nec ipsum ultrices bibendum. Aenean ac augue commodo, dignissim nulla elementum, vestibulum tortor. Phasellus vitae odio neque.
+
+Donec at ipsum bibendum, congue ipsum congue, vulputate velit. In congue augue eget diam tempus, sed lacinia ante pretium. Fusce dapibus pharetra massa, sit amet scelerisque purus venenatis id. Vivamus at ante non lorem faucibus consequat eget vitae ligula. Nunc varius rutrum nisl, nec tincidunt ante. Mauris convallis ipsum sed viverra pharetra. Vivamus suscipit gravida mattis. Pellentesque nibh erat, dictum vitae felis id, ultrices consectetur turpis.
+
+Suspendisse potenti. Mauris et felis leo. Donec magna eros, eleifend in convallis ut, malesuada sed diam. Cras id ante purus. Aenean tempus mauris nisl, non mattis enim sollicitudin auctor. Donec in enim aliquet, vestibulum neque at, semper nunc. Morbi facilisis, felis eget venenatis fringilla, nunc ante congue orci, non finibus orci neque non quam. Curabitur dapibus at enim sit amet eleifend. Mauris ullamcorper consequat massa, a semper turpis cursus quis. Etiam mollis id dolor vitae sagittis. Donec placerat ac purus quis gravida.
+
+Proin auctor, ex id mollis venenatis, mauris arcu pretium orci, quis pharetra augue est nec est. Praesent nec tellus ut sapien suscipit pharetra et vitae tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus, quam vel fermentum elementum, nulla ex interdum enim, vitae viverra justo enim eget lectus. Sed vel cursus ante. Nulla ultricies, lectus nec finibus tincidunt, metus nulla feugiat augue, ut rhoncus est leo vel nisl. Aenean sem nibh, pretium non fringilla vel, hendrerit eu augue. Suspendisse ut ante quis sapien pulvinar dapibus ac vitae massa. Nulla non mi augue.</p>
+
+    <h2>Heading 1</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lacus mi, cursus auctor finibus nec, hendrerit in massa. Aliquam porta non sapien at porta. Quisque dignissim consectetur lacus in imperdiet. Vivamus in augue eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a egestas nisl, a condimentum quam. Aliquam nunc quam, volutpat vitae nibh in, viverra hendrerit nisi. Ut ultrices est vel dolor vestibulum, a elementum eros ullamcorper. Maecenas finibus pellentesque sem, sed mollis leo pretium id.
+
+Donec ut quam odio. Morbi vulputate et sem vel facilisis. Morbi mollis dolor at rutrum lobortis. Morbi luctus pellentesque nunc. Donec fringilla quam quis faucibus tincidunt. In hac habitasse platea dictumst. In hendrerit risus in massa fermentum placerat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas risus nibh, pulvinar at tempus sed, aliquam placerat elit. Nulla sed quam sapien. Sed et pretium massa. Aenean lorem nunc, laoreet non odio sit amet, tincidunt posuere massa. Aliquam eget commodo ipsum. Maecenas id ex nec ipsum ultrices bibendum. Aenean ac augue commodo, dignissim nulla elementum, vestibulum tortor. Phasellus vitae odio neque.
+
+Donec at ipsum bibendum, congue ipsum congue, vulputate velit. In congue augue eget diam tempus, sed lacinia ante pretium. Fusce dapibus pharetra massa, sit amet scelerisque purus venenatis id. Vivamus at ante non lorem faucibus consequat eget vitae ligula. Nunc varius rutrum nisl, nec tincidunt ante. Mauris convallis ipsum sed viverra pharetra. Vivamus suscipit gravida mattis. Pellentesque nibh erat, dictum vitae felis id, ultrices consectetur turpis.
+
+Suspendisse potenti. Mauris et felis leo. Donec magna eros, eleifend in convallis ut, malesuada sed diam. Cras id ante purus. Aenean tempus mauris nisl, non mattis enim sollicitudin auctor. Donec in enim aliquet, vestibulum neque at, semper nunc. Morbi facilisis, felis eget venenatis fringilla, nunc ante congue orci, non finibus orci neque non quam. Curabitur dapibus at enim sit amet eleifend. Mauris ullamcorper consequat massa, a semper turpis cursus quis. Etiam mollis id dolor vitae sagittis. Donec placerat ac purus quis gravida.
+
+Proin auctor, ex id mollis venenatis, mauris arcu pretium orci, quis pharetra augue est nec est. Praesent nec tellus ut sapien suscipit pharetra et vitae tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus, quam vel fermentum elementum, nulla ex interdum enim, vitae viverra justo enim eget lectus. Sed vel cursus ante. Nulla ultricies, lectus nec finibus tincidunt, metus nulla feugiat augue, ut rhoncus est leo vel nisl. Aenean sem nibh, pretium non fringilla vel, hendrerit eu augue. Suspendisse ut ante quis sapien pulvinar dapibus ac vitae massa. Nulla non mi augue.</p>
+    <h2>Heading 2</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lacus mi, cursus auctor finibus nec, hendrerit in massa. Aliquam porta non sapien at porta. Quisque dignissim consectetur lacus in imperdiet. Vivamus in augue eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a egestas nisl, a condimentum quam. Aliquam nunc quam, volutpat vitae nibh in, viverra hendrerit nisi. Ut ultrices est vel dolor vestibulum, a elementum eros ullamcorper. Maecenas finibus pellentesque sem, sed mollis leo pretium id.
+
+Donec ut quam odio. Morbi vulputate et sem vel facilisis. Morbi mollis dolor at rutrum lobortis. Morbi luctus pellentesque nunc. Donec fringilla quam quis faucibus tincidunt. In hac habitasse platea dictumst. In hendrerit risus in massa fermentum placerat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas risus nibh, pulvinar at tempus sed, aliquam placerat elit. Nulla sed quam sapien. Sed et pretium massa. Aenean lorem nunc, laoreet non odio sit amet, tincidunt posuere massa. Aliquam eget commodo ipsum. Maecenas id ex nec ipsum ultrices bibendum. Aenean ac augue commodo, dignissim nulla elementum, vestibulum tortor. Phasellus vitae odio neque.
+
+Donec at ipsum bibendum, congue ipsum congue, vulputate velit. In congue augue eget diam tempus, sed lacinia ante pretium. Fusce dapibus pharetra massa, sit amet scelerisque purus venenatis id. Vivamus at ante non lorem faucibus consequat eget vitae ligula. Nunc varius rutrum nisl, nec tincidunt ante. Mauris convallis ipsum sed viverra pharetra. Vivamus suscipit gravida mattis. Pellentesque nibh erat, dictum vitae felis id, ultrices consectetur turpis.
+
+Suspendisse potenti. Mauris et felis leo. Donec magna eros, eleifend in convallis ut, malesuada sed diam. Cras id ante purus. Aenean tempus mauris nisl, non mattis enim sollicitudin auctor. Donec in enim aliquet, vestibulum neque at, semper nunc. Morbi facilisis, felis eget venenatis fringilla, nunc ante congue orci, non finibus orci neque non quam. Curabitur dapibus at enim sit amet eleifend. Mauris ullamcorper consequat massa, a semper turpis cursus quis. Etiam mollis id dolor vitae sagittis. Donec placerat ac purus quis gravida.
+
+Proin auctor, ex id mollis venenatis, mauris arcu pretium orci, quis pharetra augue est nec est. Praesent nec tellus ut sapien suscipit pharetra et vitae tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus, quam vel fermentum elementum, nulla ex interdum enim, vitae viverra justo enim eget lectus. Sed vel cursus ante. Nulla ultricies, lectus nec finibus tincidunt, metus nulla feugiat augue, ut rhoncus est leo vel nisl. Aenean sem nibh, pretium non fringilla vel, hendrerit eu augue. Suspendisse ut ante quis sapien pulvinar dapibus ac vitae massa. Nulla non mi augue.</p>
+    <h2>Heading 3</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lacus mi, cursus auctor finibus nec, hendrerit in massa. Aliquam porta non sapien at porta. Quisque dignissim consectetur lacus in imperdiet. Vivamus in augue eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a egestas nisl, a condimentum quam. Aliquam nunc quam, volutpat vitae nibh in, viverra hendrerit nisi. Ut ultrices est vel dolor vestibulum, a elementum eros ullamcorper. Maecenas finibus pellentesque sem, sed mollis leo pretium id.
+
+Donec ut quam odio. Morbi vulputate et sem vel facilisis. Morbi mollis dolor at rutrum lobortis. Morbi luctus pellentesque nunc. Donec fringilla quam quis faucibus tincidunt. In hac habitasse platea dictumst. In hendrerit risus in massa fermentum placerat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas risus nibh, pulvinar at tempus sed, aliquam placerat elit. Nulla sed quam sapien. Sed et pretium massa. Aenean lorem nunc, laoreet non odio sit amet, tincidunt posuere massa. Aliquam eget commodo ipsum. Maecenas id ex nec ipsum ultrices bibendum. Aenean ac augue commodo, dignissim nulla elementum, vestibulum tortor. Phasellus vitae odio neque.
+
+Donec at ipsum bibendum, congue ipsum congue, vulputate velit. In congue augue eget diam tempus, sed lacinia ante pretium. Fusce dapibus pharetra massa, sit amet scelerisque purus venenatis id. Vivamus at ante non lorem faucibus consequat eget vitae ligula. Nunc varius rutrum nisl, nec tincidunt ante. Mauris convallis ipsum sed viverra pharetra. Vivamus suscipit gravida mattis. Pellentesque nibh erat, dictum vitae felis id, ultrices consectetur turpis.
+
+Suspendisse potenti. Mauris et felis leo. Donec magna eros, eleifend in convallis ut, malesuada sed diam. Cras id ante purus. Aenean tempus mauris nisl, non mattis enim sollicitudin auctor. Donec in enim aliquet, vestibulum neque at, semper nunc. Morbi facilisis, felis eget venenatis fringilla, nunc ante congue orci, non finibus orci neque non quam. Curabitur dapibus at enim sit amet eleifend. Mauris ullamcorper consequat massa, a semper turpis cursus quis. Etiam mollis id dolor vitae sagittis. Donec placerat ac purus quis gravida.
+
+Proin auctor, ex id mollis venenatis, mauris arcu pretium orci, quis pharetra augue est nec est. Praesent nec tellus ut sapien suscipit pharetra et vitae tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus, quam vel fermentum elementum, nulla ex interdum enim, vitae viverra justo enim eget lectus. Sed vel cursus ante. Nulla ultricies, lectus nec finibus tincidunt, metus nulla feugiat augue, ut rhoncus est leo vel nisl. Aenean sem nibh, pretium non fringilla vel, hendrerit eu augue. Suspendisse ut ante quis sapien pulvinar dapibus ac vitae massa. Nulla non mi augue.</p>
+  </div>
+
+</body>
+</html>
+
+
+
+
+
+Task 5. -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Z-Index Example</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+      position: absolute;
+    }
+    
+    .boxs {
+      width: 400px;
+      height: 400px;
+      position: absolute;
+    }
+
+    .box1 {
+      background-color: red;
+      top: 50px;
+      left: 50px;
+      z-index: 1;
+     
+    }
+
+    .box2 {
+      background-color: green;
+      top: 100px;
+      left: 100px;
+      z-index: 2;
+    }
+
+    .box3 {
+      background-color: blue;
+      top: 150px;
+      left: 150px;
+      z-index: 0;
+    }
+    
+    .box4 {
+      background-color: gold;
+      top: 76px;
+      left: 76px;
+      z-index: -1;
+    }
+  </style>
+</head>
+<body>
+  <div class="box box1">z-index: 1</div>
+  <div class="box box2">z-index: 2</div>
+  <div class="box box3">z-index: 0</div>
+  <div class="boxs box4">z-index: -1</div>
+</body>
+</html>
+
