@@ -1,0 +1,464 @@
+
+
+Que.1  Describe the main differences between the CSS Flexbox layout model and the CSS Grid layout model. When
+would you choose to use one over the other?
+
+Ans.
+
+Flexbox is one-dimensional (row or column), best for aligning items in a line.
+Grid is two-dimensional (rows and columns), best for complex layouts.
+
+✅ Use Flexbox for simple layouts.
+✅ Use Grid for full-page or complex designs.
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Que.2 Explain the role of the following key properties in the Flexbox layout mode
+i.justify-conten
+ii. align-item/
+iii. gap
+iv. flex-directio
+v. flex-wrap  
+
+
+Ans.
+
+1. justify-content
+Aligns items horizontally along the main axis.
+
+Values: flex-start, center, flex-end, space-between, space-around, space-evenly.
+
+2. align-items
+Aligns items vertically along the cross axis.
+
+Values: stretch, flex-start, center, flex-end, baseline.
+
+3. gap
+Sets space between flex items (row/column gap).
+
+Works like margin between items but cleaner and easier.
+
+4. flex-direction
+Defines the direction of the main axis.
+
+Values: row, row-reverse, column, column-reverse.
+
+5. flex-wrap
+Controls whether items should wrap to next line if they overflow.
+
+Values: nowrap, wrap, wrap-reverse.
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Que.3   Write the code to center a div using CSS Flexbox.
+
+Ans. 
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: lime;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box"></div>
+  </div>
+</body>
+</html>
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Que.4    A client of yours wants to add a pricing section on their website to showcase their newly introduced
+premium plans.
+
+You have to build the pricing section for their business. They have provided you with the figma design for the
+same
+
+
+
+Ans
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pricing Section</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f6ff;
+      margin: 0;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .pricing-container {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .plan {
+      background-color: white;
+      border-radius: 12px;
+      padding: 30px 20px;
+      width: 250px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .plan.highlight {
+      background-color: #111c43;
+      color: white;
+    }
+
+    .plan h2 {
+      margin: 0 0 10px;
+    }
+
+    .plan h3 {
+      margin: 0;
+      font-weight: normal;
+      font-size: 14px;
+      color: #777;
+    }
+
+    .plan.highlight h3 {
+      color: #d0d0d0;
+    }
+
+    .price {
+      font-size: 32px;
+      margin: 20px 0;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+      text-align: left;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+      position: relative;
+      padding-left: 24px;
+    }
+
+    ul li::before {
+      content: "✔";
+      color: #0e8f65;
+      position: absolute;
+      left: 0;
+    }
+
+    .plan.highlight ul li::before {
+      color: #fff;
+    }
+
+    button {
+      background-color: #111c43;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 25px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .plan.highlight button {
+      background-color: white;
+      color: #111c43;
+    }
+
+    button:hover {
+      opacity: 0.85;
+    }
+  </style>
+</head>
+<body>
+  <div class="pricing-container">
+    <div class="plan">
+      <h2>Free Plan</h2>
+      <h3>For personal</h3>
+      <div class="price">$0</div>
+      <ul>
+        <li>1 users</li>
+        <li>4 Web mails</li>
+        <li>Responsive Website</li>
+        <li>Free SSL</li>
+      </ul>
+      <button>Subscribe now</button>
+    </div>
+
+    <div class="plan highlight">
+      <h2>Basic Plan</h2>
+      <h3>For small business</h3>
+      <div class="price">$29</div>
+      <ul>
+        <li>4 users</li>
+        <li>10 Web mails</li>
+        <li>Responsive Website</li>
+        <li>Free SSL</li>
+      </ul>
+      <button>Subscribe now</button>
+    </div>
+
+    <div class="plan">
+      <h2>Pro Plan</h2>
+      <h3>For enterprise</h3>
+      <div class="price">$49</div>
+      <ul>
+        <li>Unlimited users</li>
+        <li>Unlimited Web mails</li>
+        <li>Responsive Website</li>
+        <li>Free SSL + SEO</li>
+      </ul>
+      <button>Subscribe now</button>
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Que.5    build a clone of the IRCTC Ticket booking page
+
+Ans
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IRCTC Booking Clone</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+    }
+
+    .container {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .left {
+      flex: 1;
+      padding: 30px 50px;
+    }
+
+    .right {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0px;
+      padding: 20px;
+    }
+
+    .right img {
+      width: 100%;
+      max-width: 350px;
+      object-fit: cover;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header img {
+      height: 50px;
+      margin-right: 10px;
+      display: box;
+    }
+
+    .nav-buttons button {
+      margin: 0 5px;
+      padding: 6px 12px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .nav-buttons .login {
+      background: #ff7f50;
+      color: white;
+    }
+
+    .title {
+      margin-top: 20px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .tagline span {
+      margin-right: 10px;
+      font-weight: bold;
+    }
+
+    .tagline .safety { color: green; }
+    .tagline .security { color: red; }
+    .tagline .punctuality { color: blue; }
+
+    .form {
+      margin-top: 20px;
+      background: #f8f8f8;
+      padding: 20px;
+      border-radius: 12px;
+    }
+
+    .form-group {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 15px;
+      flex-wrap: wrap;
+    }
+
+    .form-group div {
+      flex: 1;
+      min-width: 180px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 14px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    .search-btn {
+      background: #00c853;
+      color: white;
+      padding: 14px 24px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .icon {
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left">
+      <div class="header">
+        <div>
+          <img src="https://logos-world.net/wp-content/uploads/2020/11/IRCTC-Logo.png" alt="IRCTC">
+          <img src="https://www.pngfind.com/pngs/m/459-4595601_indian-railways-logo-south-central-railway-indian-indian.png" alt="Indian Railways">
+        </div>
+        <div class="nav-buttons">
+          <button class="login">Login</button>
+          <button>Register</button>
+          <button>Agent Login</button>
+        </div>
+      </div>
+
+      <div class="title">Indian Railways</div>
+      <div class="tagline">
+        <span class="safety">Safety</span>
+        <span class="security">Security</span>
+        <span class="punctuality">Punctuality</span>
+      </div>
+
+      <div class="form">
+        <div class="form-group">
+          <div>
+            <label>From</label>
+            <input type="text" placeholder="Bangalore">
+          </div>
+          <div>
+            <label>To</label>
+            <input type="text" placeholder="Kasaragod">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div>
+            <label>Date</label>
+            <input type="date" value="2023-08-01">
+          </div>
+          <div>
+            <label>Class</label>
+            <select>
+              <option>3A</option>
+              <option>2A</option>
+              <option>SL</option>
+            </select>
+          </div>
+          <div>
+            <label>Seat Type</label>
+            <select>
+              <option>TATKAL</option>
+              <option>General</option>
+              <option>Ladies</option>
+            </select>
+          </div>
+        </div>
+
+        <button class="search-btn">Search Train →</button>
+      </div>
+    </div>
+
+    <div class="right">
+      <img src="https://cdn.ceylonmirror.net/english/wp-content/uploads/2023/09/vande-bharat22-1024x576.jpg" alt="Vande Bharat">
+      <img src="https://goantaxi.com/wp-content/uploads/2017/06/dudhsagar.jpg" alt="Waterfall Train">
+    </div>
+  </div>
+</body>
+</html>
+
