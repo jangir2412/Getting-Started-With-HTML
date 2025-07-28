@@ -1,0 +1,104 @@
+Q1
+
+ANS.  
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* -Target all anchor tags using descendant combinator */
+nav a {
+  color: red;
+}
+
+/* -Target only the first <h2> tag inside nav using child combinator */
+nav > h2 {
+  color: white;
+  background-color: black;
+}
+
+/* -Target the first <p> tag inside nav */
+nav > p:first-of-type {
+  color: red;
+}
+
+a[href] {
+  color: red;
+  text-decoration: none;
+}
+
+/* -Target anchor tag with class="active" */
+a[class="active"] {
+  color: blue;
+  text-decoration: underline;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* -Target anchor tag with target="_self" */
+a[target="_self"] {
+  background-color: yellow;
+}
+
+nav p:last-of-type::after {
+  content: "...";
+}
+
+/* -Change bullet point color without affecting text */
+ul li::marker {
+  color: red;
+}
+
+/* -Target the 2nd <p>, change first letter color and size */
+nav p:nth-of-type(2)::first-letter {
+  color: red;
+  font-size: 30px;
+}
+
+
+
+---------------------------------------------------------------------*-------------------------------------------------------------*---------------------------------------------------------------------------*----------------------------------------------
+
+Q2.
+
+
+ANS.
+
+
+/* Remove bullets and underlines using descendant combinator */
+nav ul li a {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+/* Display list items inline using child combinator */
+nav > ul > li {
+  display: inline;
+}
+
+/* Add spacing between menu items using adjacent sibling combinator */
+nav ul li + li {
+  margin-left: 20px;
+}
+
+
+
+
+---------------------------------------------------------------------*-------------------------------------------------------------*---------------------------------------------------------------------------*----------------------------------------------
+
+
+---------------------------------------------------------------------*-------------------------------------------------------------*---------------------------------------------------------------------------*----------------------------------------------
+
+
+
+---------------------------------------------------------------------*-------------------------------------------------------------*---------------------------------------------------------------------------*----------------------------------------------
+
+
+
+
+---------------------------------------------------------------------*-------------------------------------------------------------*---------------------------------------------------------------------------*----------------------------------------------
+
+
+
+---------------------------------------------------------------------*-------------------------------------------------------------*---------------------------------------------------------------------------*----------------------------------------------
+
