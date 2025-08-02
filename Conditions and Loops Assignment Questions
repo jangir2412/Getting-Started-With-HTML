@@ -1,0 +1,153 @@
+Q1: 
+Conditional statements are used to perform different actions based on different conditions. They allow your program to make decisions.
+
+#Syntax and Examples:
+
+
+if (condition) {
+  // code to execute if condition is true
+} else if (anotherCondition) {
+  // code to execute if the previous condition is false and this is true
+} else {
+  // code to execute if all conditions are false
+}
+
+# Example:
+
+
+let age = 18;
+
+if (age >= 18) {
+  console.log("You are eligible to vote.");
+} else {
+  console.log("You are not eligible to vote.");
+}
+
+
+----------------------------------------------------------------*--------------------------------------------------------------------*----------------------------------------------------------------*--------------------------------------------------------------------*
+
+Q2: 
+
+
+let marks = 85;
+
+if (marks > 90) {
+  console.log("A Grade");
+} else if (marks > 70 && marks <= 90) {
+  console.log("B Grade");
+} else if (marks > 50 && marks <= 70) {
+  console.log("C Grade");
+} else {
+  console.log("F Grade");
+}
+
+
+
+----------------------------------------------------------------*--------------------------------------------------------------------*----------------------------------------------------------------*--------------------------------------------------------------------*
+
+Q3: 
+
+Loops are used to execute a block of code repeatedly until a specified condition is false. They help avoid writing repetitive code.
+
+
+
+# Types of Loops in JavaScript:
+
+-For Loop
+
+   Syntax:
+ 
+   for (initialization; condition; increment) {
+     // code block
+   }
+
+Example:
+
+ 
+   for (let i = 1; i <= 5; i++) {
+     console.log(i);
+   }
+
+
+-While Loop**
+
+   Syntax:
+
+  
+   while (condition) {
+     // code block
+   }`
+
+   Example:
+
+   let i = 1;
+   while (i <= 5) {
+     console.log(i);
+     i++;
+   }
+ 
+
+-Do...While Loop**
+
+ Syntax:
+
+  
+   do {
+     // code block
+   } while (condition);
+ 
+
+Example:
+
+ 
+   let i = 1;
+   do {
+     console.log(i);
+     i++;
+   } while (i <= 5);
+ 
+
+----------------------------------------------------------------*--------------------------------------------------------------------*----------------------------------------------------------------*--------------------------------------------------------------------*
+
+Q4:
+
+
+const num1 = 10;
+const num2 = 25;
+
+for (let i = num1 + 1; i <= num2; i++) {
+  console.log(i);
+}
+
+
+Output:
+
+11
+12
+13
+
+25
+
+
+
+----------------------------------------------------------------*--------------------------------------------------------------------*----------------------------------------------------------------*--------------------------------------------------------------------*
+
+
+Q5:
+-Ascending Order (1 to 25)
+
+let i = 1;
+while (i <= 25) {
+  console.log(i);
+  i++;
+}
+
+-Descending Order (25 to 1)
+
+let j = 25;
+while (j >= 1) {
+  console.log(j);
+  j--;
+}
+
+
