@@ -86,19 +86,89 @@ nav ul li + li {
 
 ---------------------------------------------------------------------*-------------------------------------------------------------*---------------------------------------------------------------------------*----------------------------------------------
 
+Q.3
+
+Ans.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pseudo Example</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>element</h1>
+</body>
+</html>
+
+
+Style:-
+
+h1::before {
+  content: "Start - ";
+  color: green;
+}
+
+h1::after {
+  content: " - End";
+  color: red;
+}
+
 
 ---------------------------------------------------------------------*-------------------------------------------------------------*---------------------------------------------------------------------------*----------------------------------------------
 
 
+Q.4
+
+Ans
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pseudo Element Button</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <button class="styled-btn">Click Me</button>
+</body>
+</html>
+
+
+Style:-  
+
+/* Add words before and after the button using pseudo-elements */
+.styled-btn::before {
+  content: "Hello ";
+  color: #555;
+  margin-right: 5px;
+}
+
+.styled-btn::after {
+  content: " Now!";
+  color: #555;
+  margin-left: 5px;
+}
+
+/* Basic styling for the button */
+.styled-btn {
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  background-color: #e0e0e0;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+}
+
+/* Hover effects */
+.styled-btn:hover {
+  background-color: #4caf50;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
 
 ---------------------------------------------------------------------*-------------------------------------------------------------*---------------------------------------------------------------------------*----------------------------------------------
-
-
-
-
----------------------------------------------------------------------*-------------------------------------------------------------*---------------------------------------------------------------------------*----------------------------------------------
-
-
-
----------------------------------------------------------------------*-------------------------------------------------------------*---------------------------------------------------------------------------*----------------------------------------------
-
