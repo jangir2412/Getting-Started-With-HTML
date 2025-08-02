@@ -1,0 +1,202 @@
+Que.1 
+
+
+The var() function is used to access the value of custom properties (CSS variables). It makes your styles:
+
+Reusable (define once, use everywhere)
+
+Maintainable (change in one place, updates everywhere)
+
+Dynamic (can be overridden in different scopes)
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button with var()</title>
+  <style>
+    :root {
+      --primaryColor: #00b7ff;
+      --secondaryColor: #6c757d;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    button {
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      margin-right: 10px;
+      font-size: 14px;
+      border-radius: 3px;
+    }
+
+    #primaryBtn {
+      background-color: var(--primaryColor);
+    }
+
+    #secondaryBtn {
+      background-color: var(--secondaryColor);
+    }
+  </style>
+</head>
+<body>
+  <button id="primaryBtn">Primary Button</button>
+  <button id="secondaryBtn">Secondary Button</button>
+</body>
+</html>
+
+
+
+---------------------------------*---------------------------------*---------------------------------*---------------------------------*---------------------------------*---------------------------------*---------------------------------*---------------------------------*
+
+
+Que.2 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Cube</title>
+  <style>
+    body {
+      background: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      perspective: 1000px;
+    }
+
+    .scene {
+      width: 200px;
+      height: 200px;
+      position: relative;
+      transform-style: preserve-3d;
+      animation: rotate 10s infinite linear;
+    }
+
+    .face {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background: rgba(0, 123, 255, 0.9);
+      border: 1px solid #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      font-weight: bold;
+      color: #000;
+    }
+
+    .front    { transform: rotateY(  0deg) translateZ(100px); }
+    .back     { transform: rotateY(180deg) translateZ(100px); }
+    .right    { transform: rotateY( 90deg) translateZ(100px); }
+    .left     { transform: rotateY(-90deg) translateZ(100px); }
+    .top      { transform: rotateX( 90deg) translateZ(100px); }
+    .bottom   { transform: rotateX(-90deg) translateZ(100px); }
+
+    @keyframes rotate {
+      0%   { transform: rotateX(0deg) rotateY(0deg); }
+      100% { transform: rotateX(360deg) rotateY(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="scene">
+    <div class="face front">Front</div>
+    <div class="face back">Back</div>
+    <div class="face right">Right</div>
+    <div class="face left">Left</div>
+    <div class="face top">Top</div>
+    <div class="face bottom">Bottom</div>
+  </div>
+</body>
+</html>
+
+
+
+---------------------------------*---------------------------------*---------------------------------*---------------------------------*---------------------------------*---------------------------------*---------------------------------*---------------------------------*
+
+
+Que.3
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CSS Loader</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f9f9f9;
+    }
+
+    .loader {
+      width: 40px;
+      height: 40px;
+      border: 4px solid #ccc;
+      border-top: 4px solid #007bff;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0%   { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="loader"></div>
+</body>
+</html>
+
+
+
+---------------------------------*---------------------------------*---------------------------------*---------------------------------*---------------------------------*---------------------------------*---------------------------------*---------------------------------*
+
+Que.4 
+
+
+Open the PW Skills Website
+Visit: https://pwskills.com
+
+-Open Developer Tools
+
+-Right-click on the logo → Click “Inspect”
+
+-Locate the Logo Element
+
+-Apply Custom CSS in DevTools
+   -> display: none !important;
+
+
+
+---------------------------------*---------------------------------*---------------------------------*---------------------------------*---------------------------------*---------------------------------*---------------------------------*---------------------------------*
+
+Que.5
+
+1. Visit the PW Skills Website
+2. Open Developer Tools
+3. Locate the “Login / Register” Button
+4. Inspect the Button Element
+5. Edit the Button Text
+6. Replace with “Connect with us”
+7. Press Enter to Apply Changes
+
+
