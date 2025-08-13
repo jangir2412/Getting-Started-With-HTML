@@ -1,0 +1,144 @@
+Q1
+
+
+
+Output is:     Hello, my name is Alice
+
+
+Reason:
+
+  -Arrow functions in JavaScript do not have their own this.
+  -Instead, they lexically inherit this from their surrounding scope (in this case, the greet function).
+  -When person.greet() is called, this inside greet refers to person.
+  -Because the arrow function inside setTimeout doesn’t change the this binding, it still refers to person.
+  -Therefore, this.name is "Alice".
+
+If you replaced the arrow function with a regular function, it would behave differently, 
+because setTimeout would call that function with this pointing to the global object (window in browsers, 
+undefined in strict mode), and this.name would be undefined.
+
+
+
+
+
+================================================================================================================================================================================================================================
+
+
+Q2
+
+
+const multiply = (a, b) => a * b;
+
+const obj = {
+    value: 10,
+    add: (num) => obj.value + num
+};
+
+console.log(multiply(5, 3)); // 15
+console.log(obj.add(5));     // 15
+
+
+
+================================================================================================================================================================================================================================
+
+
+
+Q3
+
+
+function fetchData() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            let success = Math.random() > 0.5;
+            success ? resolve("Data received") : reject("Error fetching data");
+        }, 2000);
+    });
+}
+
+async function getData() {
+    try {
+        const data = await fetchData();
+        console.log(data);
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+getData();
+
+
+
+
+================================================================================================================================================================================================================================
+
+
+
+
+Q4
+
+
+function fetchUserData() {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            console.log("User data fetched");
+            resolve({ userId: 1, name: "John Doe" });
+        }, 1000);
+    });
+}
+
+function fetchOrderDetails() {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            console.log("Order details fetched");
+            resolve({ orderId: 101, items: ["Book", "Pen"] });
+        }, 2000);
+    });
+}
+
+function fetchPaymentStatus() {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            console.log("Payment status fetched");
+            resolve({ status: "Paid" });
+        }, 3000);
+    });
+}
+
+async function processOrder() {
+    const user = await fetchUserData();
+    const order = await fetchOrderDetails();
+    const payment = await fetchPaymentStatus();
+
+    console.log("Order completed");
+    console.log({ user, order, payment });
+}
+
+processOrder();
+
+
+
+
+================================================================================================================================================================================================================================
+
+
+
+Q5
+
+function squareNumber(input) {
+    try {
+        const num = Number(input);
+
+        if (isNaN(num)) {
+            throw new Error("Not a number");
+        }
+
+        return num * num;
+    } catch (error) {
+        return "Invalid Input";
+    }
+}
+
+// Examples:
+console.log(squareNumber("5"));     // 25
+console.log(squareNumber("abc"));   // "Invalid Input"
+console.log(squareNumber(10));      // 100
