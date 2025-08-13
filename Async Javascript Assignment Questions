@@ -1,0 +1,190 @@
+Q1
+
+
+console.log("Script start");
+
+// Async task that waits for a promise
+async function asyncTask() {
+    console.log("Async task started...");
+    await new Promise(resolve => setTimeout(resolve, 1000)); // waits 1 second
+    console.log("Async task completed!");
+}
+
+// Start the async task
+asyncTask();
+
+// Blocking task that freezes the event loop
+function blockingTask() {
+    console.log("Blocking task started...");
+    let startTime = Date.now();
+    while (Date.now() - startTime < 3000) {
+        // Busy-wait loop for 3 seconds
+        // This blocks the event loop completely
+    }
+    console.log("Blocking task finished!");
+}
+
+// Run the blocking task
+blockingTask();
+
+console.log("Script end");
+
+
+
+
+
+====================================================================================================================================================================================================
+
+
+Q2
+
+
+JavaScript is single-threaded and runs in a synchronous, blocking manner by default because:
+
+#Deterministic Execution
+
+  -One statement executes at a time in the order it appears.
+  -This makes reasoning about state changes easier without race conditions.
+
+#Call Stack Design
+
+  -JavaScript uses a single call stack to manage execution.
+  -The next statement runs only after the current one finishes.
+
+#Web APIs Handle Async Work
+
+  -Async tasks (AJAX, timers, file reading) are delegated to the browser’s Web APIs (or Node.js APIs).
+  -When they’re done, they place callbacks in the callback queue, which is processed only when the stack is clear (via the event loop).
+
+#Preventing Chaos
+
+  -If JS executed everything asynchronously by default, code order would be unpredictable, leading to difficult debugging and inconsistent results.
+
+
+console.log("Start");
+
+function taskOne() {
+    console.log("Task One complete");
+}
+
+function taskTwo() {
+    console.log("Task Two complete");
+}
+
+taskOne();
+taskTwo();
+
+console.log("End");
+
+
+
+====================================================================================================================================================================================================
+
+
+
+Q3
+
+
+// Delay function returning a Promise
+function delay(ms, message) {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            console.log(message);
+            resolve();
+        }, ms);
+    });
+}
+
+// Chaining multiple promises
+delay(1000, "Message 1 after 1 second")
+    .then(() => delay(2000, "Message 2 after 2 seconds"))
+    .then(() => delay(1500, "Message 3 after 1.5 seconds"))
+    .then(() => console.log("All messages displayed!"));
+
+
+====================================================================================================================================================================================================
+
+Q4
+
+
+#Promise States in JavaScript
+
+  -Pending – Initial state, async task not finished.
+  -Fulfilled – Task succeeded, .then() runs.
+  -Rejected – Task failed. .catch() runs.
+
+#Transitions:
+
+  -Pending → Fulfilled (success)
+  -Pending → Rejected (failure)
+  -Once fulfilled/rejected, the state is settled and cannot change.
+
+
+
+====================================================================================================================================================================================================
+
+
+
+Q5
+
+
+#Promise callbacks (.then, .catch, .finally)
+
+  -Go into the microtask queue (a.k.a. job queue).
+  -Higher priority: microtasks are executed immediately after the current synchronous code, before any macrotasks like setTimeout.
+
+#setTimeout callbacks
+
+  -Go into the macrotask queue (a.k.a. task queue).
+  -Executed after all microtasks are done for the current tick.
+
+
+console.log("Start");
+
+setTimeout(() => console.log("Timeout"), 0);
+
+Promise.resolve().then(() => console.log("Promise"));
+
+console.log("End");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
