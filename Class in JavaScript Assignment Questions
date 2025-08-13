@@ -1,0 +1,356 @@
+
+
+Q1
+
+Ans :      // Constructor function for Person
+function Person(name, age) {
+    this.name = name;
+    this.age = age;
+}
+
+// Adding method to Person prototype
+Person.prototype.displayInfo = function () {
+    console.log(`Name: ${this.name}, Age: ${this.age}`);
+};
+
+// Creating two instances of Person
+let person1 = new Person("Akshay", 25);
+let person2 = new Person("Rohit", 30);
+
+// Displaying their name and age
+person1.displayInfo(); // Output: Name: Akshay, Age: 25
+person2.displayInfo(); // Output: Name: Rohit, Age: 30
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+Q2
+
+Ans:    // Constructor function for BankAccount
+function BankAccount(initialBalance) {
+    this.balance = initialBalance;
+}
+
+// Deposit method
+BankAccount.prototype.deposit = function(amount) {
+    if (amount > 0) {
+        this.balance += amount;
+        console.log(`Deposited: ₹${amount}. New Balance: ₹${this.balance}`);
+    } else {
+        console.log("Deposit amount must be positive.");
+    }
+};
+
+// Withdraw method
+BankAccount.prototype.withdraw = function(amount) {
+    if (amount > 0 && amount <= this.balance) {
+        this.balance -= amount;
+        console.log(`Withdrew: ₹${amount}. New Balance: ₹${this.balance}`);
+    } else if (amount > this.balance) {
+        console.log("Insufficient balance.");
+    } else {
+        console.log("Withdrawal amount must be positive.");
+    }
+};
+
+// Creating a bank account object
+let myAccount = new BankAccount(5000);
+
+// Performing operations
+myAccount.deposit(1500);   // Deposited: ₹1500. New Balance: ₹6500
+myAccount.withdraw(2000);  // Withdrew: ₹2000. New Balance: ₹4500
+myAccount.withdraw(5000);  // Insufficient balance
+
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+Q3
+
+
+Ans:    // Constructor function for Book
+function Book(title, author) {
+    this.title = title;
+    this.author = author;
+}
+
+// Adding method to Book prototype
+Book.prototype.displayInfo = function () {
+    console.log(`Title: "${this.title}", Author: ${this.author}`);
+};
+
+// Creating two book instances
+let book1 = new Book("The Design of Everyday Things", "Don Norman");
+let book2 = new Book("Clean Code", "Robert C. Martin");
+
+// Displaying information
+book1.displayInfo(); // Output: Title: "The Design of Everyday Things", Author: Don Norman
+book2.displayInfo(); // Output: Title: "Clean Code", Author: Robert C. Martin
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+Q4
+
+Ans:   // Class definition for Person
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    // Method to display person's information
+    displayInfo() {
+        console.log(`Name: ${this.name}, Age: ${this.age}`);
+    }
+}
+
+// Creating instances of Person
+let person1 = new Person("Akshay", 25);
+let person2 = new Person("Rohit", 30);
+
+// Displaying information
+person1.displayInfo(); // Output: Name: Akshay, Age: 25
+person2.displayInfo(); // Output: Name: Rohit, Age: 30
+
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+Q5
+
+
+Ans:   // Class definition for Calculator
+class Calculator {
+    constructor(value1, value2) {
+        this.value1 = value1;
+        this.value2 = value2;
+    }
+
+    // Method for addition
+    add() {
+        return this.value1 + this.value2;
+    }
+
+    // Method for subtraction
+    subtract() {
+        return this.value1 - this.value2;
+    }
+
+    // Method for multiplication
+    multiply() {
+        return this.value1 * this.value2;
+    }
+
+    // Method for division
+    divide() {
+        if (this.value2 !== 0) {
+            return this.value1 / this.value2;
+        } else {
+            return "Error: Division by zero";
+        }
+    }
+}
+
+// Creating an instance of Calculator
+let calc = new Calculator(20, 5);
+
+// Performing and showing operations
+console.log(`Addition: ${calc.add()}`);       // Output: 25
+console.log(`Subtraction: ${calc.subtract()}`); // Output: 15
+console.log(`Multiplication: ${calc.multiply()}`); // Output: 100
+console.log(`Division: ${calc.divide()}`);       // Output: 4
+
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+Q6
+
+Ans:     // Base class Shape
+class Shape {
+    constructor(name) {
+        this.name = name;
+    }
+
+    // Common method to display shape name
+    displayName() {
+        console.log(`Shape: ${this.name}`);
+    }
+}
+
+// Circle subclass
+class Circle extends Shape {
+    constructor(radius) {
+        super("Circle");
+        this.radius = radius;
+    }
+
+    area() {
+        return Math.PI * Math.pow(this.radius, 2);
+    }
+
+    perimeter() {
+        return 2 * Math.PI * this.radius;
+    }
+}
+
+// Rectangle subclass
+class Rectangle extends Shape {
+    constructor(width, height) {
+        super("Rectangle");
+        this.width = width;
+        this.height = height;
+    }
+
+    area() {
+        return this.width * this.height;
+    }
+
+    perimeter() {
+        return 2 * (this.width + this.height);
+    }
+}
+
+// Right Triangle subclass
+class RightTriangle extends Shape {
+    constructor(base, height) {
+        super("Right Triangle");
+        this.base = base;
+        this.height = height;
+    }
+
+    area() {
+        return 0.5 * this.base * this.height;
+    }
+
+    perimeter() {
+        let hypotenuse = Math.sqrt(Math.pow(this.base, 2) + Math.pow(this.height, 2));
+        return this.base + this.height + hypotenuse;
+    }
+}
+
+// Creating instances
+let circle = new Circle(5);
+let rectangle = new Rectangle(4, 6);
+let triangle = new RightTriangle(3, 4);
+
+// Displaying areas and perimeters
+circle.displayName();
+console.log(`Area: ${circle.area().toFixed(2)}, Perimeter: ${circle.perimeter().toFixed(2)}`);
+
+rectangle.displayName();
+console.log(`Area: ${rectangle.area()}, Perimeter: ${rectangle.perimeter()}`);
+
+triangle.displayName();
+console.log(`Area: ${triangle.area()}, Perimeter: ${triangle.perimeter().toFixed(2)}`);
+
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+Q7
+
+Ans:    // Book class
+class Book {
+    constructor(title, author) {
+        this.title = title;
+        this.author = author;
+        this.isAvailable = true; // By default, a book is available
+    }
+
+    // Method to display book info
+    displayInfo() {
+        console.log(`Title: "${this.title}", Author: ${this.author}, Available: ${this.isAvailable}`);
+    }
+}
+
+// Library class
+class Library {
+    constructor(name) {
+        this.name = name;
+        this.books = [];
+    }
+
+    // Add a book to the library
+    addBook(book) {
+        this.books.push(book);
+        console.log(`Added "${book.title}" to the library.`);
+    }
+
+    // Check out a book (mark as unavailable)
+    checkoutBook(title) {
+        let book = this.books.find(b => b.title === title && b.isAvailable);
+        if (book) {
+            book.isAvailable = false;
+            console.log(`You have checked out "${book.title}".`);
+        } else {
+            console.log(`"${title}" is not available for checkout.`);
+        }
+    }
+
+    // Return a book (mark as available)
+    returnBook(title) {
+        let book = this.books.find(b => b.title === title && !b.isAvailable);
+        if (book) {
+            book.isAvailable = true;
+            console.log(`You have returned "${book.title}".`);
+        } else {
+            console.log(`"${title}" was not borrowed from this library.`);
+        }
+    }
+
+    // Display all books in the library
+    displayBooks() {
+        console.log(`\nLibrary: ${this.name}`);
+        this.books.forEach(book => book.displayInfo());
+    }
+}
+
+// --- Example usage ---
+
+// Create library
+let myLibrary = new Library("City Library");
+
+// Create books
+let book1 = new Book("The Design of Everyday Things", "Don Norman");
+let book2 = new Book("Clean Code", "Robert C. Martin");
+let book3 = new Book("Atomic Habits", "James Clear");
+
+// Add books to library
+myLibrary.addBook(book1);
+myLibrary.addBook(book2);
+myLibrary.addBook(book3);
+
+// Display books
+myLibrary.displayBooks();
+
+// Checkout a book
+myLibrary.checkoutBook("Clean Code");
+
+// Display after checkout
+myLibrary.displayBooks();
+
+// Return a book
+myLibrary.returnBook("Clean Code");
+
+// Display after return
+myLibrary.displayBooks();
+
