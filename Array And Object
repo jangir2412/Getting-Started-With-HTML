@@ -1,3 +1,230 @@
 Q1
 
 
+let shoppingCart = ['Milk', 'Coffee', 'Tea', 'Honey'];
+
+// 1. Add 'Meat' at the beginning if not already added
+if (!shoppingCart.includes('Meat')) {
+  shoppingCart.unshift('Meat');
+}
+
+// 2. Add 'Sugar' at the end if not already added
+if (!shoppingCart.includes('Sugar')) {
+  shoppingCart.push('Sugar');
+}
+
+// 3. Remove 'Honey' if allergic
+let allergicToHoney = true;
+if (allergicToHoney) {
+  let honeyIndex = shoppingCart.indexOf('Honey');
+  if (honeyIndex !== -1) {
+    shoppingCart.splice(honeyIndex, 1);
+  }
+}
+
+// 4. Modify 'Tea' to 'Green Tea'
+let teaIndex = shoppingCart.indexOf('Tea');
+if (teaIndex !== -1) {
+  shoppingCart[teaIndex] = 'Green Tea';
+}
+
+console.log(shoppingCart);
+
+
+Output:
+
+[ 'Meat', 'Milk', 'Coffee', 'Green Tea', 'Sugar' ]
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+Q2
+
+
+const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24];
+
+// 1. Sort array
+ages.sort((a, b) => a - b);
+console.log("Sorted Ages:", ages);
+
+// Find min and max
+const minAge = ages[0];
+const maxAge = ages[ages.length - 1];
+console.log("Min Age:", minAge);
+console.log("Max Age:", maxAge);
+
+// 2. Median age
+let median;
+if (ages.length % 2 === 0) {
+  const mid1 = ages[ages.length / 2 - 1];
+  const mid2 = ages[ages.length / 2];
+  median = (mid1 + mid2) / 2;
+} else {
+  median = ages[Math.floor(ages.length / 2)];
+}
+console.log("Median Age:", median);
+
+// 3. Average age
+const average = ages.reduce((sum, age) => sum + age, 0) / ages.length;
+console.log("Average Age:", average);
+
+// 4. Range of ages
+const range = maxAge - minAge;
+console.log("Range:", range);
+
+// 5. Compare |min - average| and |max - average|
+const minDiff = Math.abs(minAge - average);
+const maxDiff = Math.abs(maxAge - average);
+console.log("|Min - Average|:", minDiff);
+console.log("|Max - Average|:", maxDiff);
+
+
+Output:
+
+Sorted Ages: [19, 19, 20, 22, 24, 24, 24, 25, 25, 26]
+Min Age: 19
+Max Age: 26
+Median Age: 24
+Average Age: 22.8
+Range: 7
+|Min - Average|: 3.8000000000000007
+|Max - Average|: 3.1999999999999993
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+Q3
+
+
+// a) Create a student object
+const student = {
+    name: "John",
+    age: 20
+};
+
+// a) Prevent adding new properties
+Object.preventExtensions(student);
+
+// b) Check if extensible
+const extensibleStatus = Object.isExtensible(student);
+
+// c) Create teacher object
+const teacher = {
+    subject: "Math"
+};
+
+// d) Seal the teacher object
+Object.seal(teacher);
+
+// e) Check if sealed
+const sealedStatus = Object.isSealed(teacher);
+
+// f) Print results
+console.log("Is student extensible?", extensibleStatus);
+console.log("Is teacher sealed?", sealedStatus);
+
+
+
+Output:
+
+Is student extensible? false
+Is teacher sealed? true
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+Q4
+
+
+// Initial array of students
+let students = [
+  { id: 1, firstName: "John", lastName: "Doe", age: 20, grade: "A" },
+  { id: 2, firstName: "Jane", lastName: "Smith", age: 22, grade: "B" },
+  { id: 3, firstName: "Bob", lastName: "Johnson", age: 19, grade: "A" }
+];
+
+// a) Add a Student
+function addStudent(newStudent) {
+  students.push(newStudent);
+}
+
+// b) Update Student Information
+function updateStudent(id, updatedInfo) {
+  const studentIndex = students.findIndex(student => student.id === id);
+  if (studentIndex !== -1) {
+    students[studentIndex] = { ...students[studentIndex], ...updatedInfo };
+  } else {
+    console.log("Student not found!");
+  }
+}
+
+// c) Delete a Student
+function deleteStudent(id) {
+  students = students.filter(student => student.id !== id);
+}
+
+// d) List All Students
+function listAllStudents() {
+  console.log("List of Students:");
+  students.forEach(student => {
+    console.log(`${student.id}: ${student.firstName} ${student.lastName}, Age: ${student.age}, Grade: ${student.grade}`);
+  });
+}
+
+// e) Find Students by Grade
+function findStudentsByGrade(grade) {
+  return students.filter(student => student.grade === grade);
+}
+
+// f) Calculate Average Age
+function calculateAverageAge() {
+  const totalAge = students.reduce((sum, student) => sum + student.age, 0);
+  return totalAge / students.length;
+}
+
+// -------- Example Usage --------
+addStudent({ id: 4, firstName: "Alice", lastName: "Brown", age: 21, grade: "B" });
+updateStudent(2, { age: 23, grade: "A" });
+deleteStudent(1);
+listAllStudents();
+
+console.log("Students with grade A:", findStudentsByGrade("A"));
+console.log("Average Age:", calculateAverageAge());
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+Q5
+
+
+// Student object
+const student = {
+  name: "Alice",
+  age: 22,
+  major: "Computer Science",
+  GPA: 3.8,
+  isEnrolled: true
+};
+
+// Function to display student info
+function displayStudentInfo(studentObj) {
+  for (let property in studentObj) {
+    console.log(`Property: ${property}, Value: ${studentObj[property]}`);
+  }
+}
+
+// Call the function
+displayStudentInfo(student);
+
