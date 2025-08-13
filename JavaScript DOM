@@ -1,0 +1,301 @@
+Q1
+
+
+The DOM (Document Object Model) is a programming interface that browsers create for web pages.
+It represents the HTML document as a tree structure where every element, attribute, and piece of text becomes a node that you can access and manipulate using JavaScript.
+
+Think of it like this:
+HTML is your blueprint, but the DOM is the living structure in the browser that you can poke, modify, and interact with.
+
+
+
+
+
+============================================================================================================================================================================================================================================
+
+
+
+Q2
+
+
+Event delegation is a JavaScript pattern where you attach a single event listener to a parent element instead of multiple listeners to individual child elements.
+The event listener uses event bubbling (where events travel from the target element up to the root) to detect which child was interacted with.
+
+How it Works
+You place an event listener on a common ancestor element.
+
+When an event happens on a child element, it bubbles up to the ancestor.
+
+Inside the event handler, you check event.target to identify which child triggered it.
+
+
+
+
+
+============================================================================================================================================================================================================================================
+
+
+
+Q3
+
+
+
+Event bubbling is a mechanism in the DOM where an event starts from the innermost target element (where it was triggered) and travels upward through its parent elements, all the way to the document root.
+
+Think of it like a bubble rising in water — it starts at the bottom (child) and goes up (parent → grandparent → ...).
+
+
+
+
+
+============================================================================================================================================================================================================================================
+
+
+
+Q4
+
+The addEventListener() method is used to attach an event handler to a DOM element without overwriting existing handlers.
+It lets you run specific code when a certain event occurs (e.g., click, mouseover, keydown) on an element.
+
+  -eventType → A string like "click", "mouseover", "keydown".
+  -callback → The function to run when the event occurs.
+  -useCapture (optional) → Boolean to choose capturing phase (true) or bubbling phase (false, default).
+
+
+
+
+============================================================================================================================================================================================================================================
+
+Q5
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button Alert Example</title>
+</head>
+<body>
+  
+  <h2>Click the Button</h2>
+  <button id="myButton">Click Me!</button>
+
+  <script>
+    // Get the button element
+    const button = document.getElementById("myButton");
+
+    // Attach click event listener
+    button.addEventListener("click", () => {
+      alert("Button was clicked!");
+    });
+  </script>
+
+</body>
+</html>
+
+
+
+
+============================================================================================================================================================================================================================================
+
+
+Q6
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Image Carousel</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background: #111;
+            color: white;
+        }
+        .carousel {
+            position: relative;
+            max-width: 600px;
+            margin: auto;
+        }
+        .carousel img {
+            width: 100%;
+            display: none;
+        }
+        .carousel img.active {
+            display: block;
+        }
+        button {
+            background: #00bfff;
+            border: none;
+            padding: 10px 20px;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+        }
+        button:hover {
+            background: #008fcc;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Image Carousel</h1>
+
+    <div class="carousel">
+        <img src="https://cdn.pixabay.com/photo/2016/11/19/14/00/code-1839406_640.jpg" class="active">
+        <img src="https://cdn.pixabay.com/photo/2017/04/23/19/30/earth-2254769_640.jpg">
+        <img src="https://cdn.pixabay.com/photo/2015/09/09/21/12/monitor-933392_1280.jpg">
+    </div>
+
+    <button onclick="prevImage()">Previous</button>
+    <button onclick="nextImage()">Next</button>
+
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll(".carousel img");
+
+        function showImage(index) {
+            images.forEach(img => img.classList.remove("active"));
+            images[index].classList.add("active");
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            showImage(currentIndex);
+        }
+    </script>
+
+</body>
+</html>
+
+
+
+============================================================================================================================================================================================================================================
+
+
+
+Q7
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Menu</title>
+    <style>
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            position: relative;
+            margin: 5px 0;
+        }
+        a {
+            text-decoration: none;
+            color: blue;
+        }
+        /* Hide dropdown by default */
+        .dropdown {
+            display: none;
+            list-style-type: circle;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <ul id="nav">
+        <li><a href="#">Home</a></li>
+        <li>
+            <a href="#">Services</a>
+            <ul class="dropdown">
+                <li><a href="#">Submenu 4</a></li>
+                <li><a href="#">Submenu 5</a></li>
+                <li><a href="#">Submenu 6</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+
+    <script>
+        document.querySelectorAll("#nav > li").forEach(item => {
+            item.addEventListener("mouseover", () => {
+                const dropdown = item.querySelector(".dropdown");
+                if (dropdown) {
+                    dropdown.style.display = "block";
+                }
+            });
+            item.addEventListener("mouseout", () => {
+                const dropdown = item.querySelector(".dropdown");
+                if (dropdown) {
+                    dropdown.style.display = "none";
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
+
+
+
+
+============================================================================================================================================================================================================================================
+
+
+Q8
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shopping List</title>
+  <style>
+    button {
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <input type="text" id="itemInput" placeholder="Enter item">
+  <button onclick="addItem()">Add Item</button>
+  <ul id="shoppingList"></ul>
+
+  <script>
+    function addItem() {
+      const input = document.getElementById('itemInput');
+      const itemText = input.value.trim();
+
+      if (itemText === "") return; // Don't add empty items
+
+      const li = document.createElement('li');
+      li.textContent = itemText;
+
+      const deleteBtn = document.createElement('button');
+      deleteBtn.textContent = "Delete";
+      deleteBtn.onclick = function() {
+        li.remove();
+      };
+
+      li.appendChild(deleteBtn);
+      document.getElementById('shoppingList').appendChild(li);
+
+      input.value = "";
+      input.focus();
+    }
+  </script>
+</body>
+</html>
+
